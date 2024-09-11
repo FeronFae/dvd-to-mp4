@@ -1,4 +1,4 @@
-# *<u>Python-based DVD to MP4 converter</u>*
+# *<u>Python-based DVD to MP4 converter — Automated DVD Digitalizer</u>*
 
 ## 1. Dependencies
 ### 1.1 HandBrakeCLI
