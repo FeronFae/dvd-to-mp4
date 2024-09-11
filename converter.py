@@ -1,7 +1,5 @@
-import subprocess
-import re
+import subprocess, json, re
 from glob import glob
-import json
 
 class converter:
 
@@ -11,15 +9,16 @@ class converter:
                 settings = json.load(config)
                 self.dvd = settings["Optical Drive"]
                 self.path = settings["Working Directory"]
+
         except FileNotFoundError:
             print("Please run setup.py before using the program!")
             exit()
-        #self.dvd = '/dev/sr0'
-        #self.path = '/home/feron/Desktop/'
+
         if self.path[-1] == '/':
             self.dir = self.path + 'dvd'
         else:
             self.dir = self.path + '/dvd'
+        
         self.iso = self.dir + '.iso'
         self.log = self.dir + '.log'
     
